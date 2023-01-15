@@ -5,6 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cruise Ships</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <div id="modal-add-port" class="modal">
+      <form
+        action=""
+        class="modal-content"
+        id="newPortForm"
+        onsubmit="event.preventDefault()"
+      >
+        <div class="modal-container">
+          <label for="add-port-input">Add Port:</label>
+          <input
+            type="text"
+            required
+            placeholder="Port Name..."
+            name="add-port-input"
+            id="add-port-input"
+          />
+          <div id="modal-buttons">
+            <button type="submit" class="btn" id="submitbtn">Submit</button>
+            <button type="button" class="btn" id="cancelbtn">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <h4 id="message"><span id="message-text">All Aboard!</span></h4>
+    <div id="viewport">
+      <div id="ports"></div>
+      <div id="ship"></div>
+    </div>
+    <div id="btn-container">
+      <button id="sailbutton" class="btn">Set Sail!</button>
+      <button id="addport" class="btn">Add Port</button>
+      <button id="mutebtn" class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          style="vertical-align: -0.125em"
+          width="1em"
+          height="0.9em"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="mute-icon"
+            fill="currentColor"
+            d="M4.34 2.93L2.93 4.34L7.29 8.7L7 9H3v6h4l5 5v-6.59l4.18 4.18c-.65.49-1.38.88-2.18 1.11v2.06a8.94 8.94 0 0 0 3.61-1.75l2.05 2.05l1.41-1.41L4.34 2.93zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zm-7-8l-1.88 1.88L12 7.76zm4.5 8A4.5 4.5 0 0 0 14 7.97v1.79l2.48 2.48c.01-.08.02-.16.02-.24z"
+          />
+        </svg>
+      </button>
+    </div>
+    <footer>
+      <div>
+        <p class="me-tsvstacks">Made by TSV-Stacks</p>
+      </div>
+      <div class="fa-icons">
+        <a
+          href="https://www.linkedin.com/in/tarndeep-virdi/"
+          target="_blank"
+          class="fa-2x icon fa fa-linkedin-square"
+        ></a>
+        <a
+          href="https://github.com/tsv-stacks"
+          target="_blank"
+          class="fa-2x icon fa fa-github-square"
+        ></a>
+        <a
+          href="https://twitter.com/tsv_stacks"
+          target="_blank"
+          class="fa-2x icon fa fa-twitter-square"
+        ></a>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./src/controller.js"></script>
+    <script src="./src/mutebutton.js"></script>
+    <script src="./src/addport.js"></script>
+    <script></script>
+  </body>
 </html>
